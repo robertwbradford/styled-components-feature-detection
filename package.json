@@ -14,7 +14,7 @@
     "lint": "eslint",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "release": "git checkout master && git pull && npm run verify && npm run clean && npm run build"
+    "release": "git checkout master && git pull && npm run verify && npm run clean && npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
