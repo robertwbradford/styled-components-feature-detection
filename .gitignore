@@ -61,4 +61,5 @@ typings/
 .next
 
 # built output on root
-/[A-Z]*.js
+/[a-z]*.js
+/lib
