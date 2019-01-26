@@ -8,12 +8,14 @@ const buildTargets = {
 const config = {
   env: {
     cjs: {
+      ignore: buildIgnores,
       presets: [
         ["@babel/preset-env", { targets: buildTargets }],
         "@babel/preset-react"
       ]
     },
     es: {
+      ignore: buildIgnores,
       presets: [
         ["@babel/preset-env", { targets: buildTargets }],
         "@babel/preset-react"

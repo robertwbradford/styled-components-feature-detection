@@ -9,9 +9,12 @@
     "build:cjs": "BABEL_ENV=cjs babel --root-mode upward src --out-dir lib/cjs",
     "build:es": "BABEL_ENV=es babel --root-mode upward src --out-dir lib/es",
     "build:pluck": "BABEL_ENV=cjs babel --root-mode upward src/features --out-dir .",
-    "clean": "rm -rf lib [A-Z]*.js",
+    "clean": "rm -rf lib ref.js",
+    "verify": "npm run lint && npm run test",
+    "lint": "eslint",
     "test": "jest",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "release": "git checkout master && git pull && npm run verify && npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
