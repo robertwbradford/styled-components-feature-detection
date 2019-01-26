@@ -2,9 +2,15 @@
   "name": "@plumbblake/styled-components-feature-detection",
   "version": "1.0.0",
   "description": "Feature detection utilities for styled-components",
-  "main": "index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/es/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:cjs & npm run build:es & npm run build:pluck",
+    "build:cjs": "BABEL_ENV=cjs babel --root-mode upward src --out-dir lib/cjs",
+    "build:es": "BABEL_ENV=es babel --root-mode upward src --out-dir lib/es",
+    "build:pluck": "BABEL_ENV=cjs babel --root-mode upward src/features --out-dir .",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,33 @@
   "bugs": {
     "url": "https://github.com/plumbblake/styled-components-feature-detection/issues"
   },
-  "homepage": "https://github.com/plumbblake/styled-components-feature-detection#readme"
+  "homepage": "https://github.com/plumbblake/styled-components-feature-detection#readme",
+  "dependencies": {
+    "react-is": "^16.7.0"
+  },
+  "peerDependencies": {
+    "react": ">16.3.0",
+    "react-dom": ">16.3.0",
+    "styled-components": ">=2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.8.0",
+    "eslint": "^5.12.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.0.0",
+    "prettier": "^1.16.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.1.3"
+  }
 }

@@ -1,15 +1,10 @@
 import React from "react";
+import styled from "styled-components";
 import { isForwardRef } from "react-is";
 
-const ref = styled => {
-  try {
-    const StyledComponent = styled.div``;
-    return isForwardRef(<StyledComponent />);
-  } catch {
-    console.error(
-      "Wrong type provided. Expected default export from styled-components."
-    );
-  }
-};
+const StyledComponent = styled.div``;
+const isRefSupported = isForwardRef(<StyledComponent />);
+
+const ref = isRefSupported;
 
 export default ref;
