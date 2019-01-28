@@ -9,3 +9,11 @@ Boolean value indicating if the version of [styled-components](https://www.style
 ```
 import isRefSupported from "@plumbblake/styled-components-feature-detection/ref"
 ```
+
+## createGlobalStyle
+
+Boolean value indicating if the version of [styled-components](https://www.styled-components.com/) installed supports `createGlobalStyle`.
+
+```
+import isCreateGlobalStyleSupported from "@plumbblake/styled-components-feature-detection/createGlobalStyle"
+```

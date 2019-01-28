@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { isForwardRef } from "react-is";
 
 const StyledComponent = styled.div``;
-const isRefSupported = isForwardRef(<StyledComponent />);
-
-const ref = isRefSupported;
+const ref = isForwardRef(<StyledComponent />);
 
 export default ref;
