@@ -11,7 +11,7 @@
     "build:pluck": "BABEL_ENV=cjs babel --root-mode upward src/features --out-dir .",
     "clean": "rimraf lib \"!(*.config|*.setup).js\"",
     "verify": "npm run lint && npm run test",
-    "lint": "eslint",
+    "lint": "eslint .",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "release": "git checkout master && git pull && npm run verify && npm run clean && npm run build && npm publish --access public"
