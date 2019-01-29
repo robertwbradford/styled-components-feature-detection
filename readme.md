@@ -17,3 +17,7 @@ Boolean value indicating if the version of [styled-components](https://www.style
 ```
 import isCreateGlobalStyleSupported from "@plumbblake/styled-components-feature-detection/createGlobalStyle"
 ```
+
+## Contributing
+
+See [contributing.md](contributing.md)
