@@ -1,6 +1,6 @@
 {
   "name": "@plumbblake/styled-components-feature-detection",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Feature detection utilities for styled-components",
   "main": "lib/cjs/index.js",
   "module": "lib/es/index.js",
