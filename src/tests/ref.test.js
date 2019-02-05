@@ -1,5 +1,5 @@
-import isRefSupported from "../features/ref.js";
+import { ref } from "../index.js";
 
 test("Feature Detect ref", () => {
-  expect(isRefSupported).toBe(true);
+  expect(ref).toBe(true);
 });

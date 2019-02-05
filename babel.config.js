@@ -17,7 +17,7 @@ const config = {
     es: {
       ignore: buildIgnores,
       presets: [
-        ["@babel/preset-env", { targets: buildTargets }],
+        ["@babel/preset-env", { targets: buildTargets, modules: false }],
         "@babel/preset-react"
       ]
     },

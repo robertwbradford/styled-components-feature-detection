@@ -1,4 +1,4 @@
-import { createGlobalStyle as cgs } from "styled-components";
+const { createGlobalStyle: cgs } = require("styled-components");
 
 const createGlobalStyle = typeof cgs !== "undefined";
 

@@ -1,5 +1,5 @@
-import isCreateGlobalStyleSupported from "../features/createGlobalStyle.js";
+import { createGlobalStyle } from "../index.js";
 
 test("Feature Detect createGlobalStyle", () => {
-  expect(isCreateGlobalStyleSupported).toBe(true);
+  expect(createGlobalStyle).toBe(true);
 });
